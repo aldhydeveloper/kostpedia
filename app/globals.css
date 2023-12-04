@@ -16,12 +16,29 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+@layer components{
+  .show{
+    @apply opacity-100 visible scale-100 origin-top-left;
+  }
+  .hide{
+    @apply opacity-0 invisible scale-0 origin-top-left;
+  }
+ 
+}
+@layer base{
+  
+ .swiper-button-prev, .swiper-button-next{
+    @apply text-sage-600;
+  }
+
+ 
+}
+/* body { */
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-}
+    rgb(var(--background-start-rgb)); */
+/* } */
