@@ -1,0 +1,128 @@
+ {
+    "Kost": [
+      {
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost1.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost2.jpg",
+        "price": 2000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost3.jpeg",
+        "price": 1200000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost4.jpg",
+        "price": 2900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost5.jpg",
+        "price": 9900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost6.jpg",
+        "price": 9900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost7.jpg",
+        "price": 9900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost8.jpg",
+        "price": 9900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost9.jpg",
+        "price": 9900000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "kost10.jpeg",
+        "price": 9900000
+      }
+    ],
+    "Apartment": [
+      {
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart1.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart2.jpeg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart3.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart4.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart5.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart6.jpeg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart7.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart8.jpg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart9.jpeg",
+        "price": 1000000
+      },{
+        "name": "Lorem Ipsum",
+        "address": "is simply dummy text of the",
+        "route":"/kost1",
+        "img": "apart10.jpg",
+        "price": 1000000
+      }
+    ]
+  }

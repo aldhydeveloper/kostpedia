@@ -36,6 +36,7 @@ export default function Slide() {
                     alt={v.alt}
                     style={{ objectFit: 'cover' }}
                     priority={true}
+                    sizes="(max-width: 1024px) 100vw"
                   />
                 </div>
               </SwiperSlide>

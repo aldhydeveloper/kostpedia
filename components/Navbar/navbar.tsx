@@ -35,7 +35,7 @@ const cx = classNames.bind({
 
 export default function Navbar() {
   const direction = useScrollDirection();
-  console.log(direction)
+  // console.log(direction)
   // interface Hover
   const [hover, setHover] = useState<string | null>(null);
   const [style, setStyle] = useState<object | {}>({});
@@ -47,15 +47,31 @@ export default function Navbar() {
 
   useEffect(() => {
     const w = ref.current.offsetWidth;
-    window.addEventListener('scroll', () => {
-      const position = window.pageYOffset;
-      if (position > 20 && position < 160) {
-        setStyle({
-          width: `${w + position}px`
-        })
-      } else {
-      }
-     })
+    // window.addEventListener('scroll', () => {
+    //   const position = window.pageYOffset;
+    //   console.log(position)
+    //   if (position > 20 && position < 0) {
+    //     if (direction == 'up') {
+    //       setStyle({
+    //         width: `${w - 70 }px`
+    //       })
+    //     }  else {
+    //       setStyle({
+    //         width: `${w + 70 }px`
+    //       })
+    //     }
+    //   }else if ((position > 71 && position < 160) ) { 
+    //     if (direction == 'up') {
+    //       setStyle({
+    //         width: `${w - 70 }px`
+    //       })
+    //     }  else {
+    //       setStyle({
+    //         width: `${w + 70 }px`
+    //       })
+    //     }
+    //   } 
+    //  })
   })
   return (
     <>
