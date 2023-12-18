@@ -29,7 +29,7 @@ export default function Slide() {
             return (
               <SwiperSlide key={i}>
                 <div className="relative min-h-[70vh]">
-                  <div className="absolute top-0 right-0 bottom-0 left-0 bg-slate-700/80 opacity-70 z-10"></div>
+                  {/* <div className="absolute top-0 right-0 bottom-0 left-0 bg-slate-700/80 opacity-70 z-10"></div> */}
                   <Image
                     fill
                     src={`/img/${v.url}`}

@@ -4,6 +4,7 @@ import { Quicksand } from 'next/font/google'
 import './globals.css'
 
 import Navbar from "@/components/Navbar/navbar";
+import Footer from "@/components/Footer/footer";
 
 const nunito = Quicksand({ subsets: ['latin'], display: 'swap', weight:'500' })
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div>
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   )

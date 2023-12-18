@@ -25,7 +25,7 @@ export default function Product({data, folder }: MyProps) {
           datas.map((v,i) => {
             return (
               <Link href={`product/${folder}/${i}`} key={i} className="webkit-border-radius relative cursor-pointer snap-center transition-all duration-300 ease-in-out">
-                <div className="w-[75vw] md:w-[280px] !aspect-h-[3] !aspect-w-[4] mb-1 overflow-hidden rounded-lg">
+                <div className="w-[75vw] md:w-[278px] !aspect-h-[3] !aspect-w-[4] mb-1 overflow-hidden rounded-lg">
                   <Image
                     className="w-full h-full block object-cover"
                     src={`/img/${folder}/${v.img}`}

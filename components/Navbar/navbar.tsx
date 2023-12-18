@@ -75,7 +75,7 @@ export default function Navbar() {
   })
   return (
     <>
-      <nav ref={ref} className="fixed top-4 rounded-full bg-gradient-to- bg-almond-50/90 to-slate-600/90 z-10 inset-x-0 w-[1200px] mx-auto flex items-center px-10 duration-200 transition-all" style={style}>
+      <nav ref={ref} className="fixed top-4 rounded-full bg-gradient-to- bg-azure-50/90 to-azure-600/90 z-10 inset-x-0 w-[1200px] mx-auto flex items-center px-10 duration-200 transition-all" style={style}>
         <Link href="/">
           <h2 className="text-xl font-bold">KOSTPEDIA</h2>  
         </Link>
