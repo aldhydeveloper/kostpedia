@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={ nunito.className }>
-        <Navbar />
-        <div>
-          {children}
-        </div>
+      <body className={nunito.className}>
+          <Navbar />
+          <div>
+            {children}
+          </div>
         <Footer />
       </body>
     </html>

@@ -6,28 +6,18 @@ import { IoHome } from "react-icons/io5";
 import { PiBuildingsFill } from "react-icons/pi";
 
 import Loading from './loading';
-
-const Kost = dynamic(
-  () => import('./kost'),
-  {
-    loading: () => <Loading />,
+const loadingOpt = {
+    loading: () => <Loading iteration={5} />,
     ssr: false
   }
+const Kost = dynamic(
+  () => import('./kost'),
+  {...loadingOpt}
 )
 const Apartment = dynamic(
   () => import('./apartment'),
-  {
-    loading: () => <Loading />,
-    ssr: false
-  }
+  {...loadingOpt}
 )
-// const ProductApart = dynamic(
-//   () => import('./product'),
-//   {
-//     loading: () =><Skeleton />,
-//     ssr: false
-//   }
-// )
 
 const tabs = [
   {name: 'Kost', icon: <IoHome />, comp: <Kost />},
