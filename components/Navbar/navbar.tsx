@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 // import { hydrateRoot } from 'react-dom';
+import { usePathname } from "next/navigation";
 import { IoHome } from "react-icons/io5";
 import {
   MdApartment,
@@ -11,6 +12,7 @@ import {
 import classNames from "classnames/bind";
 import Link from "next/link";
 import { useScrollDirection } from "@/plugins/useScrollDirection";
+import WrapSearch from "@/components/Search/wrap";
 
 const blurEl = <div className="absolute inset-0 bg-white"></div>;
 const nav = [
@@ -59,33 +61,61 @@ const cx = classNames.bind({
 
 export default function Navbar() {
   const direction = useScrollDirection();
-  // console.log(direction)
+  const pathname = usePathname();
+  // console.log(pathname);
   // interface Hover
   const [hover, setHover] = useState<string | null>(null);
   const [style, setStyle] = useState<object | {}>({});
+  const [classSearch, setClassSearch] = useState<string | null>(null);
+  const [show, setShow] = useState<boolean>(false);
   const ref = useRef<any>(0);
   const hoverNav = (state: string | null) => {
     setHover(state);
     // hydrateRoot(blurEl, document.getElementById('root'));
   };
 
+  function setScroll(
+    scrollY: number,
+    pathname: string,
+    style: object,
+    lastScrollTop: number,
+    st: number = 0
+  ) {
+    if (scrollY > 300 || pathname !== "/") {
+      setStyle(style);
+      setClassSearch("!visible !opacity-100");
+      lastScrollTop = st <= 0 ? 0 : st;
+    } else {
+      setStyle({ width: "1200px" });
+      setClassSearch(null);
+    }
+  }
+
   useEffect(() => {
     const w = ref.current.offsetWidth;
     var lastScrollTop = 0;
     var count = 0;
+    const style = {
+      width: "100vw",
+      borderRadius: "unset",
+      transform: "translateY(-1rem)",
+      backgroundColor: "rgb(241 247 253)",
+      boxShadow: "12px 0px 10px #00000010",
+    };
+    // console.log(pathname);
+    setScroll(0, pathname, style, lastScrollTop);
     window.addEventListener("scroll", () => {
-      var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-      if (st > lastScrollTop) {
-        // count++;
-      } else if (st < lastScrollTop) {
-        // count--;
-      } // else was horizontal scroll
-      lastScrollTop = st <= 0 ? 0 : st;
+      const scrollY = window.scrollY;
+      var st = window.scrollY || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+      // console.log(st);
+      setScroll(scrollY, pathname, style, lastScrollTop, st);
+
       // console.log(count)
     });
-  });
+  }, [pathname]);
   return (
     <>
+      <WrapSearch onHide={() => setShow(false)} show={show} />
       <nav
         ref={ref}
         className="fixed top-4 rounded-full bg-gradient-to- bg-azure-50/90 to-azure-600/90 z-10 inset-x-0 w-[1200px] mx-auto flex items-center px-10 duration-200 transition-all"
@@ -130,7 +160,17 @@ export default function Navbar() {
               </li>
             );
           })}
-          <li className="my-4 px-2 ml-auto text-azure-700 font-bold border-r-2 border-azure-500">
+          <li
+            className={`my-3 mx-6 w-full max-w-sm ml-auto duration-200 invisible opacity-0 ${classSearch}`}
+          >
+            <button
+              className="text-left rounded-full bg-white text-slate-400 mt-0.5 px-4 py-1 text-sm w-full"
+              onClick={() => setShow(true)}
+            >
+              Cari Lokasi ...
+            </button>
+          </li>
+          <li className="my-4 px-2 text-azure-700 font-bold border-r-2 border-azure-500">
             <Link href="/">Register</Link>
           </li>
           <li className="py-4 text-azure-700 font-bold">

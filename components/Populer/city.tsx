@@ -41,7 +41,7 @@ export default function PopulerCity() {
         {data.map((v, i) => {
           return (
             <Link
-              href="/"
+              href="/search"
               className={`relative rounded-lg w-full h-60 bg-[length:190%] bg-no-repeat bg-center text-white overflow-hidden duration-200`}
               style={{
                 backgroundImage: `url(/img/city/${v.img})`,

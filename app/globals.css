@@ -27,7 +27,7 @@
 }
 @layer base{
   html{
-    @apply scroll-smooth text-slate-800;
+    @apply text-slate-800;
   }
   
  .swiper-button-prev, .swiper-button-next{
